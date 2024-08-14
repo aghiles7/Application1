@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import io
 
-def create_vlqc_plots(df):
+def create_varqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
     df_vehicule_arrete = df[df['Détection modèle'] == 'Véhicule arrêté']
 
