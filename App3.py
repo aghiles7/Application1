@@ -43,16 +43,16 @@ if uploaded_file is not None:
     csqc_buffers = create_csqc_plots(df)
 
     # Afficher les graphiques sur Streamlit
-    st.image(type_incident_buffers[0], caption='Nombre d\'incidents par type d\'incident')
-    st.image(type_incident_buffers[1], caption='Nombre d\'incidents par type d\'incident (sans Filtré Web et Inhibé Web)')
-    st.image(vlqc_buffers[0], caption='Nombre d\'incidents Véhicule lent (Partie 1)')
-    st.image(vlqc_buffers[1], caption='Nombre d\'incidents Véhicule lent (Partie 2)')
-    st.image(varqc_buffers[0], caption='Nombre d\'incidents Véhicule arrêté (Partie 1)')
-    st.image(varqc_buffers[1], caption='Nombre d\'incidents Véhicule arrêté (Partie 2)')
-    st.image(cgqc_buffers[0], caption='Nombre d\'incidents Congestion (Partie 1)')
-    st.image(cgqc_buffers[1], caption='Nombre d\'incidents Congestion (Partie 2)')
-    st.image(csqc_buffers[0], caption='Nombre d\'incidents Contresens (Partie 1)')
-    st.image(csqc_buffers[1], caption='Nombre d\'incidents Contresens (Partie 2)')
+    st.image(type_incident_buffers[0], caption="Nombre d'incidents par type d'incident")
+    st.image(type_incident_buffers[1], caption="Nombre d'incidents par type d'incident (sans Filtré Web et Inhibé Web)")
+    st.image(vlqc_buffers[0], caption="Nombre d'incidents Véhicule lent (Partie 1)")
+    st.image(vlqc_buffers[1], caption="Nombre d'incidents Véhicule lent (Partie 2)")
+    st.image(varqc_buffers[0], caption="Nombre d'incidents Véhicule arrêté (Partie 1)")
+    st.image(varqc_buffers[1], caption="Nombre d'incidents Véhicule arrêté (Partie 2)")
+    st.image(cgqc_buffers[0], caption="Nombre d'incidents Congestion (Partie 1)")
+    st.image(cgqc_buffers[1], caption="Nombre d'incidents Congestion (Partie 2)")
+    st.image(csqc_buffers[0], caption="Nombre d'incidents Contresens (Partie 1)")
+    st.image(csqc_buffers[1], caption="Nombre d'incidents Contresens (Partie 2)")
 
     # Générer le fichier PPT
     output_dir = "output"
