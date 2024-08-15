@@ -86,8 +86,7 @@ if uploaded_file is not None:
     ppt_file = os.path.join(output_dir, "report.pptx")
 
     # Combiner les buffers d'image pour le PPT
-    all_buffers = type_incident_buffers + vlqc_buffers + varqc_buffers + cgqc_buffers + csqc_buffers + cyqc_buffers + obqc_buffers
-    + piqc_buffers + anqc_buffers + fuqc_buffers 
+    all_buffers = type_incident_buffers + vlqc_buffers + varqc_buffers + cgqc_buffers + csqc_buffers + cyqc_buffers + obqc_buffers + piqc_buffers + anqc_buffers + fuqc_buffers 
     generate_ppt(all_buffers, ppt_file)
 
     st.success(f"Le fichier PPT a été généré : {ppt_file}")
