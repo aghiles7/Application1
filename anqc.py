@@ -4,7 +4,7 @@ import io
 
 def create_anqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
-    df_animal = df[df['Détection modèle'] == 'Animal']
+    df_animal = df[df['Détection modèle'].str.strip() == 'Animal']
 
     # Compter le nombre d'incidents par caméra et par type de qualification
     incident_counts = df_animal.groupby(['Caméra', 'Type de qualification']).size().unstack(fill_value=0)

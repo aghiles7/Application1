@@ -4,7 +4,7 @@ import io
 
 def create_csqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
-    df_contresens = df[df['Détection modèle'] == 'Contresens']
+    df_contresens = df[df['Détection modèle'].str.strip() == 'Contresens']
 
     # Compter le nombre d'incidents par caméra et par type de qualification
     incident_counts = df_contresens.groupby(['Caméra', 'Type de qualification']).size().unstack(fill_value=0)

@@ -4,7 +4,7 @@ import io
 
 def create_cgqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
-    df_congestion = df[df['Détection modèle'] == 'Congestion']
+    df_congestion = df[df['Détection modèle'].str.strip() == 'Congestion']
 
     # Compter le nombre d'incidents par caméra et par type de qualification
     incident_counts = df_congestion.groupby(['Caméra', 'Type de qualification']).size().unstack(fill_value=0)

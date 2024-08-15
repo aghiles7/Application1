@@ -4,7 +4,7 @@ import io
 
 def create_vlqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
-    df_vehicule_lent = df[df['Détection modèle'] == 'Véhicule lent']
+    df_vehicule_lent = df[df['Détection modèle'].str.strip() == 'Véhicule lent']
 
     # Compter le nombre d'incidents par caméra et par type de qualification
     incident_counts = df_vehicule_lent.groupby(['Caméra', 'Type de qualification']).size().unstack(fill_value=0)
