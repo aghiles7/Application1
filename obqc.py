@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import io
 
-def create_cgqc_plots(df):
+def create_obqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
     df_objet = df[df['Détection modèle'] == 'Objet']
 
