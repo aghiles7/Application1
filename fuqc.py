@@ -4,7 +4,7 @@ import io
 
 def create_fuqc_plots(df):
     # Filtrer les données pour ne garder que les incidents de type "Véhicule arrêté"
-    df_fumee = df[df['Détection modèle'] == 'Fumée ']
+    df_fumee = df[df['Détection modèle'] == 'Fumée']
 
     # Compter le nombre d'incidents par caméra et par type de qualification
     incident_counts = df_fumee.groupby(['Caméra', 'Type de qualification']).size().unstack(fill_value=0)
