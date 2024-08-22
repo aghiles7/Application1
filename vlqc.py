@@ -37,7 +37,7 @@ def create_vlqc_plots(df):
 
     # Fonction pour créer le graphique avec l'ordre spécifique
     def create_graph(data, title):
-        fig, ax = plt.subplots(figsize=(12, 6))
+        fig, ax = plt.subplots(figsize=(14, 8))
         bottom = pd.Series(0, index=data.index)
         
         for qualif in qualification_order:
