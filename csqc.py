@@ -37,7 +37,7 @@ def create_csqc_plots(df):
 
     # Fonction pour créer le graphique avec l'ordre spécifique
     def create_graph(data, title):
-        fig, ax = plt.subplots(figsize=(14, 8))
+        fig, ax = plt.subplots(figsize=(14,10))
         bottom = pd.Series(0, index=data.index)
         
         for qualif in qualification_order:
